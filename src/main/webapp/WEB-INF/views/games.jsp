@@ -27,7 +27,7 @@
 
     <body ng-app="MGL_Task1_app" class="ng-cloak">
         <nav id="MistLibrary-navbar" class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a class="navbar-brand" href="${pageContext.request.contextPath}">
+            <a class="navbar-brand" href="/">
 			<img src="resources/static/images/MGLlogo.png" width="90" height="60" alt="">
 		</a>
             <a class="nav-item nav-link" href="games">Games</a>
@@ -86,8 +86,8 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="currentGame in MGL_T1_ctrl.games">
-                                <td><span ng-bind="currentGame.game_name"></span></td>
-                                <td><span ng-bind="currentGame.game_genre"></span></td>
+                                <td><span ng-bind="currentGame.name"></span></td>
+                                <td><span ng-bind="currentGame.genre"></span></td>
                                 <td>
                                 </td>
                             </tr>

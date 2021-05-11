@@ -1,8 +1,10 @@
 package com.organization.mvcproject.MGL_Task1.model;
 
-public class Review {
+import javax.persistence.Entity;
+
+@Entity
+public class Review extends AbstractEntity {
 	
-	private Long review_id;
 	private String reviewBody;
 	private String author;
 	private Integer rating;
@@ -31,11 +33,4 @@ public class Review {
 		this.reviewBody = reviewBody;
 	}
 
-	public Long getReview_id() {
-		return review_id;
-	}
-
-	public void setReview_id(Long review_id) {
-		this.review_id = review_id;
-	}
 }

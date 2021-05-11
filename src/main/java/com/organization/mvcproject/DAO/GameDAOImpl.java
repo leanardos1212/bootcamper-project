@@ -22,7 +22,7 @@ public class GameDAOImpl implements GameDAO {
 	
 		@Override
 		public Game saveGame(Game game) {
-			game.setGame_id(++gameId);
+			game.setId(++gameId);
 			games.add(game);
 			return game;
 		}
