@@ -13,10 +13,43 @@ public class GameDAOImpl implements GameDAO {
 	 
 	 private static List<Game> games = new ArrayList<Game>();
 	 
-	 static { 
-		 
-		 games = populateGames(); 
-		 
-				 }
+	 
+	
+	 @Override
+		public List<Game> retrieveAllGames() {
+			return games;
+		}
+	
+		@Override
+		public Game saveGame(Game game) {
+			game.setGame_id(++gameId);
+			games.add(game);
+			return game;
+		}
+	
+		public static Long getGameId() {
+			return gameId;
+		}
+	
+		public static void setGameId(Long gameId) {
+			GameDAOImpl.gameId = gameId;
+		}
+	
+		public static Long getCompanyId() {
+			return companyId;
+		}
+	
+		public static void setCompanyId(Long companyId) {
+			GameDAOImpl.companyId = companyId;
+		}
+	
+		public static List<Game> getGames() {
+			return games;
+		}
+	
+		public static void setGames(ArrayList<Game> games) {
+			GameDAOImpl.games = games;
+		}
+	
 	 
 }
