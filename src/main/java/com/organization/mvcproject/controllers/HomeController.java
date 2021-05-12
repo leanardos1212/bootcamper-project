@@ -1,4 +1,4 @@
-package com.organization.mvcproject.MGL_Task1.controller;
+package com.organization.mvcproject.controllers;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ import com.organization.mvcproject.MGL_Task1.service.GameService;
 
 
 @Controller
-public class AltController {
+public class HomeController {
 
 	@Autowired
 	private GameService gameService;
