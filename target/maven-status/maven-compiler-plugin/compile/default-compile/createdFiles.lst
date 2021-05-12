@@ -1,12 +1,12 @@
 com\organization\mvcproject\DAO\GameDAOImpl.class
 com\organization\mvcproject\MGL_Task1\model\Review.class
 com\organization\mvcproject\MGL_Task1\model\Game.class
-com\organization\mvcproject\MGL_Task1\controller\MGL_Task1_Controller.class
-com\organization\mvcproject\MGL_Task1\service\Game_Service.class
 com\organization\mvcproject\config\RestResponseHandler.class
 com\organization\mvcproject\MGL_Task1\model\AbstractEntity.class
+com\organization\mvcproject\MGL_Task1\controller\AltController.class
 com\organization\mvcproject\MGL_Task1\model\Company.class
 com\organization\mvcproject\controller\HomeController.class
 com\organization\mvcproject\config\MvcConfiguration.class
 com\organization\mvcproject\DAO\GameDAO.class
-com\organization\mvcproject\MGL_Task1\service\Game_Service_Impl.class
+com\organization\mvcproject\MGL_Task1\service\GameService.class
+com\organization\mvcproject\MGL_Task1\service\GameServiceImpl.class
