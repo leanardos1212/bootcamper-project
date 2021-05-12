@@ -7,7 +7,7 @@ import java.util.List;
 import com.organization.mvcproject.DAO.GameDAO;
 import com.organization.mvcproject.MGL_Task1.model.Game;
 
-public interface Game_Service {
+public interface GameService {
 	
 	
 	
