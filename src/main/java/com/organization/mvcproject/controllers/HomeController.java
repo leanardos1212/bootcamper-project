@@ -52,9 +52,10 @@ public class HomeController {
 		return new ResponseEntity<List<Game>>(gameService.retrieveAllGames(), HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/createGame", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Void> createGame(@RequestBody Game game) {
-		gameService.saveGame(game);
-		return new ResponseEntity<Void>(HttpStatus.CREATED);
+	@RequestMapping(value = "/createGame", method = {RequestMethod.POST,RequestMethod.PUT}, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> createGame(@RequestBody Game game) {
+		Game savedGame = gameService.saveGame(game);
+		System.out.println("works");
+		return new ResponseEntity<>(savedGame, HttpStatus.CREATED);
 	}
 }
