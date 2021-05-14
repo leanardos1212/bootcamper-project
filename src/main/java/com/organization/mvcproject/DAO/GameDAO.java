@@ -4,7 +4,7 @@ package com.organization.mvcproject.DAO;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.organization.mvcproject.MGL_Task1.model.Game;
+import com.organization.mvcproject.models.Game;
 
 
 public interface GameDAO {

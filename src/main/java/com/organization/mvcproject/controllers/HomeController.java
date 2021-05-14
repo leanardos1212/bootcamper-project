@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.organization.mvcproject.MGL_Task1.model.Game;
-import com.organization.mvcproject.MGL_Task1.model.Review;
-import com.organization.mvcproject.MGL_Task1.service.GameService;
+import com.organization.mvcproject.models.Game;
+import com.organization.mvcproject.models.Review;
+import com.organization.mvcproject.service.GameService;
 
 
 @Controller
@@ -52,7 +52,7 @@ public class HomeController {
 		return new ResponseEntity<List<Game>>(gameService.retrieveAllGames(), HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/createGame", method = {RequestMethod.POST,RequestMethod.PUT}, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/games", method = {RequestMethod.POST,RequestMethod.PUT}, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> createGame(@RequestBody Game game) {
 		Game savedGame = gameService.saveGame(game);
 		System.out.println("works");

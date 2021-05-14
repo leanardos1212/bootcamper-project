@@ -2,16 +2,17 @@ package com.organization.mvcproject.DAO;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.organization.mvcproject.MGL_Task1.model.Game;
+
+import com.organization.mvcproject.models.Game;
 
 public class GameDAOImpl implements GameDAO {
 	
 	private static Integer gameID = 0;
 	
-	private static List<Game> games = new ArrayList<Game>();
+	private static List<Game> gamesList = new ArrayList<Game>();
 	
 	static  {
-			games = populateGames();
+			gamesList = populateGames();
 	}
 	
 	static List<Game> populateGames() {
@@ -31,29 +32,29 @@ public class GameDAOImpl implements GameDAO {
 		game3.setGenre("MMORPG");
 		game3.setName("Runescape");
 
-		games.add(game1);
-		games.add(game2);
-		games.add(game3);
+		gamesList.add(game1);
+		gamesList.add(game2);
+		gamesList.add(game3);
 
-		return games;
+		return gamesList;
 	}
 	 
 		@Override
 		public List<Game> retrieveAllGames() {
-			games.stream();
-			return games;
+			gamesList.stream();
+			return gamesList;
 		}
 	
 		@Override
 		public Game saveGame(Game game) {
 			game.setId(gameID++);
-			games.add(game);
+			gamesList.add(game);
 			return game;
 		}
 		
 		
 		public Game findByGameId(Integer gameId) {
-			  for (Game game : games) {
+			  for (Game game : gamesList) {
 			      if (game.getId() == gameId) { 
 			        return game;
 			   }
@@ -63,7 +64,7 @@ public class GameDAOImpl implements GameDAO {
 
 		@Override
 		public void deleteGame(Game game) {
-			games.remove(game);
+			gamesList.remove(game);
 		}
 	
 	 
