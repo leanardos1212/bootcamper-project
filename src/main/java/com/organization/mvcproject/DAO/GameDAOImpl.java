@@ -3,8 +3,11 @@ package com.organization.mvcproject.DAO;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.organization.mvcproject.models.Game;
 
+@Repository
 public class GameDAOImpl implements GameDAO {
 	
 	private static Integer gameID = 0;

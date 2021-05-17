@@ -1,12 +1,13 @@
 package com.organization.mvcproject.DAO;
 
 
-import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.stereotype.Repository;
 
 import com.organization.mvcproject.models.Game;
 
-
+@Repository
 public interface GameDAO {
 	
 	

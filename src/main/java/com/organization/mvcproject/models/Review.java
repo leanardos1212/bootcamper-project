@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 @Entity
 public class Review extends AbstractEntity {
 	
-	private String reviewBody;
+	private String body;
 	private String author;
 	private Integer rating;
 
@@ -25,12 +25,12 @@ public class Review extends AbstractEntity {
 		this.rating = rating;
 	}
 
-	public String getReviewBody() {
-		return reviewBody;
+	public String getBody() {
+		return body;
 	}
 
-	public void setReviewBody(String reviewBody) {
-		this.reviewBody = reviewBody;
+	public void setBody(String body) {
+		this.body = body;
 	}
 
 }

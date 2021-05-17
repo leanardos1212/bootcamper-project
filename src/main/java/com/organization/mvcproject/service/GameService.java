@@ -9,9 +9,6 @@ import com.organization.mvcproject.models.Game;
 
 public interface GameService {
 	
-//	@Autowired
-//	private GameDAO gameDAO;
-	
 	List<Game> retrieveAllGames();
 
 	Game saveGame(Game game);
