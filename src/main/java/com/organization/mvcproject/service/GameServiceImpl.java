@@ -24,6 +24,11 @@ public class GameServiceImpl implements GameService {
 	public Game saveGame(Game game) {
 		return gameDAO.saveGame(game);
 	}
+	
+	@Override
+	public Game findGameById(Integer gameId) {
+		return gameDAO.findByGameId(gameId);
+	}
 
 
 

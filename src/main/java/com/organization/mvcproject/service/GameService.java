@@ -13,4 +13,8 @@ public interface GameService {
 
 	Game saveGame(Game game);
 
+	Game findGameById(Integer gameId);
+
+	
+
 }

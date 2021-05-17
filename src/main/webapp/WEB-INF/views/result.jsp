@@ -31,7 +31,7 @@
             <tr>
                 <td>ReviewBody</td>
                 <td>
-                    <p>${submittedReview.reviewBody}</p>
+                    <p>${submittedReview.body}</p>
                 </td>
             </tr>
             <tr>

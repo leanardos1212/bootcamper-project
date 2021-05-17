@@ -55,7 +55,6 @@ public class HomeController {
 	@RequestMapping(value = "/games", method = {RequestMethod.POST,RequestMethod.PUT}, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> createGame(@RequestBody Game game) {
 		Game savedGame = gameService.saveGame(game);
-		System.out.println("works");
 		return new ResponseEntity<>(savedGame, HttpStatus.CREATED);
 	}
 }

@@ -3,11 +3,9 @@ package com.organization.mvcproject.DAO;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import com.organization.mvcproject.models.Game;
 
-@Repository
+
 public interface GameDAO {
 	
 	
@@ -18,6 +16,8 @@ public interface GameDAO {
 	void deleteGame(Game game); 
 	
 	Game findByGameId(Integer gameId);
+	
+	Game updateGame(Integer gameId, String name, String genre);
 	
 	
 	}
